@@ -8,7 +8,7 @@ const register = async (data) => {
     const response = await axios.post(`${API_URL}registration`, data);
     return response.data;
   } catch (error) {
-    console.error("Error registering user", error);
+    return error.response.data;
   }
 };
 
@@ -18,7 +18,7 @@ const login = async (data) => {
     const response = await axios.post(`${API_URL}login`, data);
     return response.data;
   } catch (error) {
-    console.error("Error logging in user", error);
+    return error.response.data;
   }
 };
 
