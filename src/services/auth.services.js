@@ -22,7 +22,21 @@ const login = async (data) => {
   }
 };
 
+const getUser = async (token) => {
+  try {
+    const response = await axios.get(`${API_URL}profile`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+}
+
 export default {
   register,
   login,
+  getUser,
 };
