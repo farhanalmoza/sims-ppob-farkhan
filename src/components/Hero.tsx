@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import backgroundSaldo from "../assets/images/background-saldo.png"
+import backgroundSaldo from "@/assets/images/background-saldo.png"
 import { RootState } from "../app/store";
 import { useEffect, useState } from "react";
 import authServices from "../services/auth.services";
 import transactionServices from "../services/transaction.services";
 import { Profile } from "../types/profile";
-import defaultAvatar from "../assets/images/default-avatar.png";
+import defaultAvatar from "@/assets/images/default-avatar.png";
 
 const Hero = () => {
   const token = useSelector((state: RootState) => state.auth.token);

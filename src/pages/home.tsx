@@ -2,23 +2,23 @@ import React from 'react'
 import Hero from '../components/Hero';
 
 // import images
-import PBB from "../assets/images/PBB.png";
-import Listrik from "../assets/images/Listrik.png";
-import Pulsa from "../assets/images/Pulsa.png";
-import PDAM from "../assets/images/PDAM.png";
-import Game from "../assets/images/Game.png";
-import Kurban from "../assets/images/Kurban.png";
-import Musik from "../assets/images/Musik.png";
-import PaketData from "../assets/images/Paket-Data.png";
-import PGN from "../assets/images/PGN.png";
-import Televisi from "../assets/images/Televisi.png";
-import VoucherMakanan from "../assets/images/Voucher-Makanan.png";
-import Zakat from "../assets/images/Zakat.png";
-import Banner1 from "../assets/images/Banner1.png";
-import Banner2 from "../assets/images/Banner2.png";
-import Banner3 from "../assets/images/Banner3.png";
-import Banner4 from "../assets/images/Banner4.png";
-import Banner5 from "../assets/images/Banner5.png";
+import PBB from "@/assets/images/PBB.png";
+import Listrik from "@/assets/images/Listrik.png";
+import Pulsa from "@/assets/images/Pulsa.png";
+import PDAM from "@/assets/images/PDAM.png";
+import Game from "@/assets/images/Game.png";
+import Kurban from "@/assets/images/Kurban.png";
+import Musik from "@/assets/images/Musik.png";
+import PaketData from "@/assets/images/Paket-Data.png";
+import PGN from "@/assets/images/PGN.png";
+import Televisi from "@/assets/images/Televisi.png";
+import VoucherMakanan from "@/assets/images/Voucher-Makanan.png";
+import Zakat from "@/assets/images/Zakat.png";
+import Banner1 from "@/assets/images/Banner1.png";
+import Banner2 from "@/assets/images/Banner2.png";
+import Banner3 from "@/assets/images/Banner3.png";
+import Banner4 from "@/assets/images/Banner4.png";
+import Banner5 from "@/assets/images/Banner5.png";
 import { Navbar } from '../components/Navbar';
 
 function Menu({ title, icon }) {

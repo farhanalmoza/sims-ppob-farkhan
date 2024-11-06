@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faLock } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
-import authImg from "../assets/images/auth-img.png";
-import Logo from "../assets/images/logo.png";
+import authImg from "@/assets/images/auth-img.png";
+import Logo from "@/assets/images/logo.png";
 
 const Registration = () => {
     const [formData, setFormData] = useState({

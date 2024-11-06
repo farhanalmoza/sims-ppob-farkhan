@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faLock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 
-import authImg from "../assets/images/auth-img.png";
-import Logo from "../assets/images/logo.png";
+import authImg from "@/assets/images/auth-img.png";
+import Logo from "@/assets/images/logo.png";
 import { setCredentials } from "../features/auth/authSlice";
 import { Navigate } from "react-router-dom";
 import { RootState } from "../app/store";
