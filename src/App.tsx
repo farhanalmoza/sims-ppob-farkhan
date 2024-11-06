@@ -10,6 +10,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute"
 import PublicRoute from "./components/auth/PublicRoute"
 import { useEffect } from "react"
 import { setCredentials } from "./features/auth/authSlice"
+import { TopUp } from "./pages/topup"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,12 @@ const App = () => {
         <Route path="/" element={
           <ProtectedRoute>
             <Home />
+          </ProtectedRoute>
+        } />
+
+        <Route path="/top-up" element={
+          <ProtectedRoute>
+            <TopUp />
           </ProtectedRoute>
         } />
       </Routes>
