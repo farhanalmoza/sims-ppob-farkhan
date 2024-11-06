@@ -65,7 +65,7 @@ const Hero = () => {
         <img src={backgroundSaldo} alt="background-saldo" className="absolute" />
         <div className="absolute text-white py-4 px-5">
           <p className="text-xl">Saldo Anda</p>
-          <p className="text-3xl font-bold my-4">
+          <p className="text-3xl font-bold mt-4 mb-3">
             {isBalanceVisible ? `Rp. ${balance}` : 'Rp. ********'}
           </p>
           <button onClick={toggleBalanceVisibility} className="text-sm hover:underline">
