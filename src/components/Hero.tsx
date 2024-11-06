@@ -1,11 +1,9 @@
 import { useSelector } from "react-redux";
-import backgroundSaldo from "@/assets/images/background-saldo.png"
 import { RootState } from "../app/store";
 import { useEffect, useState } from "react";
 import authServices from "../services/auth.services";
 import transactionServices from "../services/transaction.services";
 import { Profile } from "../types/profile";
-import defaultAvatar from "@/assets/images/default-avatar.png";
 
 const Hero = () => {
   const token = useSelector((state: RootState) => state.auth.token);
@@ -47,7 +45,7 @@ const Hero = () => {
 
   const profileImage = profileData?.profile_image && profileData.profile_image !== 'https://minio.nutech-integrasi.com/take-home-test/null'
     ? profileData.profile_image
-    : defaultAvatar;
+    : "/images/default-avatar.png";
   
   const toggleBalanceVisibility = () => {
     setIsBalanceVisible(!isBalanceVisible);
@@ -62,7 +60,7 @@ const Hero = () => {
       </div>
 
       <div className="relative w-full">
-        <img src={backgroundSaldo} alt="background-saldo" className="absolute" />
+        <img src="/images/background-saldo.png" alt="background-saldo" className="absolute" />
         <div className="absolute text-white py-4 px-5">
           <p className="text-xl">Saldo Anda</p>
           <p className="text-3xl font-bold mt-4 mb-3">

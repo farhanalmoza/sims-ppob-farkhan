@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faLock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 
-import authImg from "@/assets/images/auth-img.png";
-import Logo from "@/assets/images/logo.png";
 import { setCredentials } from "../features/auth/authSlice";
 import { Navigate } from "react-router-dom";
 import { RootState } from "../app/store";
@@ -74,7 +72,7 @@ const Login = () => {
         <div className="grid grid-cols-2">
             <div className="pl-48 pr-28 mt-40">
                 <div className="flex gap-4 justify-center">
-                    <img src={Logo} alt="logo" className="w-8 h-8" />
+                    <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
                     <h1 className="font-bold text-xl">SIMS PPOB FARKHAN</h1>
                 </div>
                 <div className="flex justify-center mt-8">
@@ -99,7 +97,7 @@ const Login = () => {
                     Belum punya akun? registrasi <a href="/registration" className="text-[#f13b2e] hover:underline font-medium"> di sini</a>
                 </div>
             </div>
-            <img src={authImg} alt="auth-img" />
+            <img src="/images/auth-img.png" alt="auth-img" />
         </div>
     );
 }
