@@ -4,7 +4,7 @@ export const Navbar = () => {
   return (
     <div className="flex justify-between py-8 items-center border-b border-slate-300 px-32 mx-auto">
       <div className="flex gap-2">
-        <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
+        <img src="/images/Logo.png" alt="logo" className="w-8 h-8" />
         <h1 className="font-bold text-xl">SIMS PPOB FARKHAN</h1>
       </div>
 

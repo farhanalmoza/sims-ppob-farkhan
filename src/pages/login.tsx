@@ -72,7 +72,7 @@ const Login = () => {
         <div className="grid grid-cols-2">
             <div className="pl-48 pr-28 mt-40">
                 <div className="flex gap-4 justify-center">
-                    <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
+                    <img src="/images/Logo.png" alt="logo" className="w-8 h-8" />
                     <h1 className="font-bold text-xl">SIMS PPOB FARKHAN</h1>
                 </div>
                 <div className="flex justify-center mt-8">
