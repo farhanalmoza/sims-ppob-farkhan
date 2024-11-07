@@ -15,6 +15,22 @@ const getBalance = async (token) => {
   }
 };
 
+const topUp = async (token, amount) => {
+  try {
+    const response = await axios.post(`${API_URL}topup`, {
+      top_up_amount: amount,
+    }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
 export default {
   getBalance,
+  topUp,
 };

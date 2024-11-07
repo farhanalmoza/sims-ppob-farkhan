@@ -5,7 +5,7 @@ import authServices from "../services/auth.services";
 import transactionServices from "../services/transaction.services";
 import { Profile } from "../types/profile";
 
-const Hero = () => {
+const Hero = ({ refreshTrigger, setRefreshTrigger }) => {
   const token = useSelector((state: RootState) => state.auth.token);
   const [profileData, setProfileData] = useState<Profile | null>(null);
   const [balance, setBalance] = useState(0);
@@ -15,7 +15,8 @@ const Hero = () => {
   useEffect(() => {
     fetchUser();   
     fetchBalance(); 
-  }, [token]);
+    setRefreshTrigger(false);
+  }, [token, refreshTrigger]);
 
   const fetchUser = async () => {
     try {

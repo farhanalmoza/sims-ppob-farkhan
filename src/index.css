@@ -10,3 +10,7 @@ body {
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+.btn-amount-topup {
+    @apply w-full border border-slate-400 rounded-lg py-3 font-medium hover:border-none hover:bg-[#f13b2e] hover:text-white;
+}

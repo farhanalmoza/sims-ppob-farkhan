@@ -11,6 +11,7 @@ import PublicRoute from "./components/auth/PublicRoute"
 import { useEffect } from "react"
 import { setCredentials } from "./features/auth/authSlice"
 import { TopUp } from "./pages/topup"
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const App = () => {
   
   return (
     <>
+      <Toaster position="top-right" reverseOrder={false} />
       <Routes>
         <Route path="/register" element={
           <PublicRoute>
