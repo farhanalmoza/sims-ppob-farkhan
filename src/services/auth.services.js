@@ -35,8 +35,37 @@ const getUser = async (token) => {
   }
 }
 
+const updateProfile = async (token, data) => {
+  try {
+    const response = await axios.put(`${API_URL}profile/update`, data, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+}
+
+const updateImage = async (token, formData) => {
+  try {
+    const response = await axios.put(`${API_URL}profile/image`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+}
+
 export default {
   register,
   login,
   getUser,
+  updateProfile,
+  updateImage,
 };

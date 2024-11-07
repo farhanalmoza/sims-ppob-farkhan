@@ -14,6 +14,7 @@ import { TopUp } from "./pages/topup"
 import { Toaster } from "react-hot-toast"
 import Payment from "./pages/payment"
 import Transaction from "./pages/transaction"
+import { Akun } from "./pages/akun"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -59,6 +60,11 @@ const App = () => {
         <Route path="/transaction" element={
           <ProtectedRoute>
             <Transaction />
+          </ProtectedRoute>
+        } />
+        <Route path="/akun" element={
+          <ProtectedRoute>
+            <Akun />
           </ProtectedRoute>
         } />
       </Routes>
