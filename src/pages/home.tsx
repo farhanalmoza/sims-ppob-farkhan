@@ -7,12 +7,14 @@ import { Service } from '../types/information';
 import { Navbar } from '../components/Navbar';
 import { LoadingScreen } from '../components/LoadingScreen';
 
-function Menu({ code, name, icon, tarif }) {
+function Menu({ code, name, icon }) {
   return (
-    <div key={code} className="flex gap-2 flex-col justify-items-center w-20">
+    <a href={`/payment/${code}`}
+      key={code}
+      className="flex gap-2 flex-col justify-items-center w-20">
       <img src={icon} alt={name} className='w-20 h-20' />
       <p className='text-center text-sm text-wrap'>{name}</p>
-    </div>
+    </a>
   )
 }
 
@@ -27,13 +29,15 @@ const Home = () => {
   }, [refreshTrigger]);
 
   const fetchServices = async () => {
+    setIsLoading(true);
     const token = localStorage.getItem("token");
     try {
       const response = await informationServices.getServices(token);
-      setServices(response.data);
-      
+      setServices(response.data); 
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -53,7 +57,6 @@ const Home = () => {
               code={service.service_code}
               name={service.service_name}
               icon={`/images/${service.service_code}.png`}
-              tarif={service.service_tarif}
             />
           ))}
         </div>

@@ -30,7 +30,23 @@ const topUp = async (token, amount) => {
   }
 };
 
+const transaction = async (token, service_code) => {
+  try {
+    const response = await axios.post(`${API_URL}transaction`, {
+      service_code: service_code,
+    }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data
+  } catch(error) {
+    return error.response.data
+  }
+}
+
 export default {
   getBalance,
   topUp,
+  transaction,
 };

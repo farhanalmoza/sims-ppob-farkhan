@@ -12,6 +12,7 @@ import { useEffect } from "react"
 import { setCredentials } from "./features/auth/authSlice"
 import { TopUp } from "./pages/topup"
 import { Toaster } from "react-hot-toast"
+import Payment from "./pages/payment"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -47,6 +48,11 @@ const App = () => {
         <Route path="/top-up" element={
           <ProtectedRoute>
             <TopUp />
+          </ProtectedRoute>
+        } />
+        <Route path="/payment/:service_code" element={ 
+          <ProtectedRoute>
+            <Payment />
           </ProtectedRoute>
         } />
       </Routes>
