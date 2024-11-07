@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKeyboard } from '@fortawesome/free-solid-svg-icons'
 import transactionServices from '../services/transaction.services'
 import toast from 'react-hot-toast';
+import { LoadingScreen } from '../components/LoadingScreen'
 
 export const TopUp = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -55,9 +56,8 @@ export const TopUp = () => {
 
   return (
     <>
-      {isLoading && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10" />
-      )}
+      {isLoading && (<LoadingScreen />)}
+
       <Navbar />
       <div className="px-32 mx-auto">
         <Hero refreshTrigger={refreshTrigger} setRefreshTrigger={setRefreshTrigger} />
