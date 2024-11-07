@@ -13,6 +13,7 @@ import { setCredentials } from "./features/auth/authSlice"
 import { TopUp } from "./pages/topup"
 import { Toaster } from "react-hot-toast"
 import Payment from "./pages/payment"
+import Transaction from "./pages/transaction"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -53,6 +54,11 @@ const App = () => {
         <Route path="/payment/:service_code" element={ 
           <ProtectedRoute>
             <Payment />
+          </ProtectedRoute>
+        } />
+        <Route path="/transaction" element={
+          <ProtectedRoute>
+            <Transaction />
           </ProtectedRoute>
         } />
       </Routes>

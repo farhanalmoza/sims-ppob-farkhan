@@ -45,8 +45,26 @@ const transaction = async (token, service_code) => {
   }
 }
 
+const getHistoryTransactions = async (token, offset = 0, limit = 5) => {
+  try {
+    const response = await axios.get(`${API_URL}transaction/history`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      params: {
+        offset: offset,
+        limit: limit,
+      },
+    });
+    return response.data
+  } catch(error) {
+    return error.response.data
+  }
+}
+
 export default {
   getBalance,
   topUp,
   transaction,
+  getHistoryTransactions,
 };

@@ -18,7 +18,7 @@ export const Navbar = () => {
 
       <div className="flex gap-8 items-center">
         <a href="/top-up" className={`px-4 text-lg font-semibold hover:underline ${window.location.pathname === '/top-up' ? 'text-[#f13b2e]' : ''}`}>Top Up</a>
-        <a href="" className='px-4 text-lg font-semibold hover:underline'>Transaction</a>
+        <a href="/transaction" className='px-4 text-lg font-semibold hover:underline'>Transaction</a>
         <a href="" className='px-4 text-lg font-semibold hover:underline'>Akun</a>
         <button onClick={handleLogout} className='px-4 text-lg font-semibold hover:underline'>Logout</button>
       </div>
